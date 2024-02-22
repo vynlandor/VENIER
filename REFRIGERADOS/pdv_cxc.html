@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>SOPORTE</title>
+    <style>
+      /* Estilos para el footer */
+      footer {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        background-color: #555454;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+        z-index: 9999; /* Asegura que el footer esté delante de todo el contenido */
+      }
+      /* Estilos para los íconos */
+      footer a {
+        color: white;
+        text-decoration: none;
+        margin: 0 20px;
+        display: inline-block;
+        position: relative;
+      }
+      footer a:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        right: -25px;
+        top: 50%;
+        width: 1px;
+        height: 50%;
+        background-color: white;
+        transform: translateY(-50%);
+      }
+
+      /* Media query para pantallas pequeñas (hasta 600px de ancho) */
+      @media only screen and (max-width: 600px) {
+        footer a {
+          margin: 0 10px; /* Reducir el margen entre los íconos */
+        }
+        footer a:not(:last-child)::after {
+          right: -15px; /* Ajustar la posición de la línea divisora */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Contenido de la página -->
+    <header id="header">
+      <!-- Botón de menú desplegable con tres rayas -->
+      <button class="menu-desplegable" onclick="toggleMenu()">&#8801;</button>
+      <div class="referencia">SOPORTE</div>
+    </header>
+
+    <section class="container" id="menuContainer">
+      <div>
+        <!-- Botones del menú -->
+        <a href="index.html" class="menu-button">Inicio</a>
+        <a href="pdv_promos_ung.html" class="menu-button">UNG - Vinos</a>
+        <a href="pdv_promos_cvza.html" class="menu-button">Cervezas</a>
+        <a href="pdv_promos_mkp.html" class="menu-button">Almacen</a>
+        <a href="pdv_informacion.html" class="menu-button">Informacion BEES</a>
+        <a href="pdv_cxc.html" class="menu-button">Problemas - Ayuda</a>
+      </div>
+    </section>
+
+    <div class="video-container-1">
+      <div class="video-text">Como resolver reclamos desde BEES</div>
+      <video autoplay loop muted controls class="background-video">
+        <source src="csx.mp4" type="video/mp4" />
+        Tu navegador no soporta el elemento de video.
+      </video>
+    </div>
+
+    <script>
+      function toggleMenu() {
+        var container = document.getElementById("menuContainer");
+        var header = document.getElementById("header");
+        container.classList.toggle("visible");
+        header.classList.toggle("transparent");
+      }
+    </script>
+
+
+
+    <!-- Footer -->
+    <footer>
+      <a href="index.html"
+        ><img src="casa.png" alt="HOME" width="40" height="40"
+      /></a>
+      <a href="pdv_promos_cvza.html"
+        ><img src="salud.png" alt="Cervezas" width="40" height="40"
+      /></a>
+      <a href="pdv_promos_ung.html"
+        ><img src="pepsi.png" alt="Gaseosas" width="40" height="40"
+      /></a>
+      <a href="pdv_promos_mkp.html"
+        ><img src="cajas.png" alt="Almacen" width="40" height="40"
+      /></a>
+      <a href="pdv_informacion.html"
+        ><img src="aplicacion.png" alt="Apps" width="40" height="40"
+      /></a>
+    </footer>
+  </body>
+</html>
