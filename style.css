@@ -1,0 +1,265 @@
+#menuContainer {
+  position: fixed; /* Posicionar el contenedor de menú de forma fija */
+  top: 68px; /* Alinear el contenedor de menú con la parte superior */
+  left: 0; /* Alinear el contenedor de menú con la izquierda */
+  z-index: 999; /* Colocar el contenedor de menú delante de todo el contenido */
+}
+
+header {
+  background-color: black; /* Cambiar el fondo a negro */
+  position: block;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1; /* Coloca el video detrás de todo el contenido */
+}
+
+.menu-desplegable {
+  margin-left: 10px;
+  margin-top: 15px; /* Ajustar margen superior */
+  margin-bottom: 20px; /* Ajustar margen inferior */
+  font-size: 18px; /* Tamaño de fuente uniforme */
+  background-color: black; /* Cambiar el fondo a negro */
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.menu-title {
+  margin-left: 10px; /* Ajustar margen izquierdo */
+  color: white;
+  font-size: 18px; /* Tamaño de fuente uniforme */
+  position: absolute;
+  top: 5px; /* Ajustar margen superior */
+  right: 2%; /* Alinear a la derecha */
+}
+
+.menu-title-1 {
+  margin-left: 10px; /* Ajustar margen izquierdo */
+  color: white;
+  font-size: 18px; /* Tamaño de fuente uniforme */
+  position: absolute;
+  top: 30px; /* Ajustar margen superior */
+  right: 2%; /* Alinear a la derecha */
+}
+
+/* Puedes ajustar los estilos según tus preferencias */
+
+.container {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo negro transparente al 50% */
+  width: 100%;
+  height: auto;
+  margin-top: 9px;
+}
+
+.visible {
+  display: block;
+}
+
+.transparent {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Cambia el fondo a un negro transparente */
+}
+
+.menu-button {
+  margin-left: auto; /* Alinear al centro horizontalmente */
+  margin-right: auto; /* Alinear al centro horizontalmente */
+  width: 90%; /* Establecer el ancho al 80% del contenedor */
+  padding: 15px;
+  display: block; /* Mostrar los enlaces como bloques */
+  margin-bottom: 10px; /* Espacio entre los enlaces */
+  background-color: black;
+  color: white;
+  border: 2px solid white; /* Establecer el borde de 2px sólido blanco */
+  cursor: pointer;
+  text-align: center;
+  font-size: 20px;
+  text-decoration: none; /* Quita el subrayado */
+}
+
+.container-1 {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; /* Centrar el texto horizontalmente */
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar los elementos verticalmente */
+}
+
+.menu-button-1 {
+  width: 250px;
+  height: 50px;
+  background-color: rgb(202, 125, 37);
+  color: black;
+  border: none;
+  margin-bottom: 5px; /* Espacio entre botones */
+  cursor: pointer;
+  font-size: 20px;
+  text-decoration: none; /* Quita el subrayado */
+  text-align: center; /* Centra el texto */
+  line-height: 50px; /* Ajusta la altura de línea al tamaño del botón */
+}
+
+.menu-title-2 {
+  margin-bottom: 20px; /* Espacio entre la frase y los botones */
+  color: white;
+  font-size: 24px;
+}
+
+/*/////////////////////////////////////////////////////////////////// FOOTER ///////////////////////////////////////////////////////////////////*/
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/*/////////////////////////////////////////////////////////////////// Consulta de medios para tamaños de pantalla menores o iguales a 600px ///////////////////////////////////////////////////////////////////*/
+@media only screen and (max-width: 1500px) {
+  .container {
+    height: auto; /* Altura automática en dispositivos móviles */
+  }
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ajusta el video para cubrir el área */
+    z-index: -1; /* Coloca el video detrás de todo el contenido */
+  }
+}
+footer p {
+  margin-top: -1px; /* Ajusta el margen superior para subir el texto */
+  margin-right: 30px;
+}
+
+@media only screen and (max-width: 450px) {
+  .container {
+    height: auto; /* Altura automática en dispositivos móviles */
+    left: 5px;
+  }
+
+  .menu-title,
+  .menu-title-1 {
+    font-size: 18px; /* Tamaño del texto ligeramente reducido para dispositivos móviles */
+  }
+
+  .footer-content p {
+    margin-right: 50px;
+    padding: 10px;
+  }
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ajusta el video para cubrir el área */
+    z-index: -1; /* Coloca el video detrás de todo el contenido */
+  }
+
+  footer p {
+    margin-top: -1px; /* Ajusta el margen superior para subir el texto */
+    margin-right: 30px;
+  }
+}
+
+.signup-container {
+  width: 90%;
+  height: 250px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo transparente al 60% negro */
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Efecto de sombra 3D */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrar verticalmente */
+  align-items: center; /* Centrar horizontalmente */
+  transition: transform 0.3s ease; /* Transición suave */
+}
+
+.signup-container:hover {
+  transform: translate(-50%, -50%) scale(1.05); /* Escalado al 105% al pasar el mouse */
+}
+
+.signup-container .form-group {
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 20px;
+  color: #fff; /* Texto blanco */
+}
+
+.signup-container label {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.signup-container input[type="text"],
+.signup-container select {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.signup-container button {
+  width: 150px; /* Ancho de 150px */
+  height: 50px;
+  padding: 10px;
+  background-color: #ff0000; /* Botones rojos */
+  color: #fff; /* Texto blanco */
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  right: 50%;
+}
+
+.button-1 {
+  margin: 10px 60px;
+}
+.signup-container button:hover {
+  background-color: #cc0000; /* Cambio de color al pasar el mouse */
+}

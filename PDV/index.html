@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles_index.css" />
+    <title>INICIO</title>
+  </head>
+  <body>
+    <header id="header">
+      <!-- Botón de menú desplegable con tres rayas -->
+      <button class="menu-desplegable" onclick="toggleMenu()">&#8801;</button>
+      <h1 class="menu-title">PROMOTOR</h1>
+      <h1 class="menu-title-1">FEDERICO SARAVIA</h1>
+    </header>
+    <video autoplay loop muted class="background-video">
+      <source src="fondo.mp4" type="video/mp4" />
+      Tu navegador no soporta el elemento de video.
+    </video>
+    <section class="container" id="menuContainer">
+      <div>
+        <!-- Botones del menú -->
+        <a href="index.html" class="menu-button">Inicio</a>
+        <a href="pdv_promos_ung.html" class="menu-button">UNG - Vinos</a>
+        <a href="pdv_promos_cvza.html" class="menu-button">Cervezas</a>
+        <a href="pdv_promos_mkp.html" class="menu-button">Almacen</a>
+        <a href="pdv_informacion.html" class="menu-button">Informacion BEES</a>
+        <a href="pdv_cxc.html" class="menu-button">Problemas - Ayuda</a>
+        
+      </div>
+    </section>
+
+    <section class="container-1" id="menuContainer1">
+      <div class="menu">
+        <h1 class="menu-title-2">LISTAS DE PRECIOS ACTUALIZADAS</h1>
+        <!-- Botones adicionales -->
+        <a href="pdv_listas_k+t.html" class="menu-button-1"
+          >KIOSCOS Y ALMACEN</a
+        >
+        <a href="pdv_listas_autoservicios.html" class="menu-button-1"
+          >AUTOSERVICIOS</a
+        >
+
+      </div>
+    </section>
+
+    <script>
+      function toggleMenu() {
+        var container = document.getElementById("menuContainer");
+        var header = document.getElementById("header");
+        container.classList.toggle("visible");
+        header.classList.toggle("transparent");
+      }
+    </script>
+
+<main>
+  <div class="boton-whatsapp">
+    <a
+      href="https://wa.me/+543464445975"
+      target="_blank"
+      title="Abrir WhatsApp"
+    >
+      <img src="wp2-icon.png" alt="WhatsApp" />
+    </a>
+    <a
+      href="https://mybees.com.ar/cms/index/home?country=AR&language=es"
+      target="_blank"
+      title="Abrir Bees"
+    >
+      <img src="botonbees.webp" alt="MiApp" />
+    </a>
+  </div>
+</main>
+<footer
+  style="
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  "
+>
+  <p>By federico saravia 2024</p>
+</footer>
+  </body>
+</html>
